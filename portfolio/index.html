@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pradita's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; 
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f8ff;
+      color: #111;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    nav {
+      background-color: #ffffff;
+      padding: 1rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #dbeafe;
+    }
+
+    .logo {
+      font-weight: bold;
+      color: #2563eb;
+      font-size: 1.3rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .nav-links a {
+      color: #374151;
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 3rem 6rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.4rem;
+      margin: 0.4rem 0;
+    }
+
+    .hero-text p {
+      font-size: 13px;
+      color: #2563eb;
+    }
+
+    .btn-hire {
+      margin-top: 1rem;
+      padding: 0.5rem 1.2rem;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-hire:hover {
+      background-color: #1d4ed8;
+    }
+
+    .hero-image {
+      width: 280px;
+      height: 340px;
+      background-color: #f3f4f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      box-shadow: 0 0 10px rgba(37, 99, 235, 0.1);
+      margin-top: 2rem;
+    }
+
+    .profile-pic {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+    }
+
+    .section {
+      padding: 2rem 6rem;
+      margin: 2rem 6rem;
+      background-color: #f0f6ff;
+      border-radius: 10px;
+      border: 1px solid #dbeafe;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #1f2937;
+      margin-bottom: 1rem;
+      text-align: left;
+      text-shadow: 1px 1px 0 #a5c9ff;
+    }
+
+    .section p, .section ul {
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    .divider {
+      height: 3px;
+      background: linear-gradient(to right, #2563eb, transparent);
+      margin: 2rem 6rem;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #000000;
+      font-size: 0.85rem;
+      color: #ffffff;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 0.6rem 0.8rem;
+      border-radius: 50%;
+      font-size: 1rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .hero {
+        padding: 2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .section, .divider {
+        margin: 1.5rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+  <div class="logo">Portfolio.</div>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+  <p>Hello,</p>
+  <h1>I'm Pradita</h1>
+  <p>I’m an undergraduate pursuing B.Tech in Computer Science and Engineering (IoT) from India with a deep curiosity for how technology can solve real-world problems.</p>
+  <br>
+  <p>My interests lie in UI/UX design, front-end development, and smart technologies like IoT. I’ve developed intelligent systems powered by ML and automation — from building Aadhaar forgery detection pipelines using CLIP and PyTorch to designing early warning systems for glacier outburst floods using sensor fusion, LSTM, and Django.</p>
+  <br>
+  <p>I’ve also worked with agent-based workflows, low-code tools like n8n, and large language models to craft seamless, scalable AI solutions.</p>
+  <br>
+  <p>I’m always eager to learn, collaborate, and innovate — whether it’s through hackathons, internships, or passion projects.</p>
+  <br>
+  <button class="btn-hire">Hire Me</button>
+</div>
+
+    <div class="hero-image">
+      <img src="me.png" alt="Pradita's Photo" class="profile-pic">
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- About -->
+  <section class="section" id="about">
+  <h2 class="section-title">About</h2>
+  <p>
+    I’m a creative and detail-oriented Computer Science (IoT) undergraduate with a strong passion for blending design, intelligence, and automation. While I enjoy crafting intuitive and elegant UI/UX experiences, I also thrive in the world of smart technologies, machine learning, and front-end development. Over the course of my academic and professional journey, I’ve designed and implemented intelligent ML pipelines using CLIP, PyTorch, and fine-tuned LLMs, built real-time systems using IoT sensors and LSTMs, and contributed to low-code automation using n8n and agent-based workflows. 
+    <br><br>
+    Whether it’s through a beautifully responsive interface or a scalable AI system running behind the scenes, I believe in building technology that’s meaningful, user-centric, and future-ready. I'm always eager to learn, collaborate on impactful projects, and explore how innovation can be used to solve real-world challenges.
+  </p>
+</section>
+
+
+  <div class="divider"></div>
+
+  <!-- Skills -->
+  <div class="section" id="skills">
+    <h2>Skills & Competencies</h2>
+    <ul>
+      <li><strong>Programming Languages:</strong> C++, C, Java, Python, HTML, CSS, ARM Assembly</li>
+      <li><strong>Web & Tools:</strong> React-Redux Toolkit, Web Scraping, MySQL, Git, Linux, GCC, OpenSSL, ESP32, Fine-Tuning LLMs</li>
+      <li><strong>Core Concepts:</strong> DBMS, Operating Systems, OOPs, Computer Networks, Data Structures, RTOS Concepts, IoT Development</li>
+      <li><strong>Soft Skills:</strong> Problem-solving, Communication, Analytical Thinking, Time Management, Team Collaboration, Adaptability, Design Thinking</li>
+      <li><strong>Certifications:</strong> 
+        <a href="https://docs.google.com/document/d/1nul8osadwbKvSsWDupx8FTYmveSCKUwQmfB8-KMan6A/edit?usp=sharing" target="_blank">Responsible and Safe AI Systems (NPTEL)</a>, 
+        <a href="https://docs.google.com/document/d/1UDDx3tm_NCQKru4Gr-zjbKyavA8aRzc6Fk4cPzTp3pY/edit?usp=sharing" target="_blank">Affective Computing (NPTEL)</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Services -->
+  <div class="section" id="services">
+    <h2>What I Offer</h2>
+    <p>As a passionate and skilled Computer Science undergrad...</p>
+    <ul>
+      <li><strong>AI & ML Development:</strong> Fine-tuning vision-language models...</li>
+      <li><strong>Secure System Development:</strong> Custom encryption tools...</li>
+      <li><strong>IoT & Embedded Systems:</strong> Developing real-time monitoring systems...</li>
+      <li><strong>Web Applications:</strong> Full-stack web development...</li>
+      <li><strong>Research & Documentation:</strong> High-quality research projects...</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <h2 class="section-title">Work Experience</h2>
+    <p>Here are some of the professional and academic experiences that have helped shape my journey:</p>
+    <ul>
+  <li><strong>ML Intern – CodeStax.Ai (Trinom Digital Pvt Ltd)</strong><br/>
+    <em>June 2025 – July 2025</em><br/>
+    During the internship, I designed and implemented robust, end-to-end machine learning pipelines combining advanced multimodal techniques such as CLIP for visual-text representation, PyTorch for deep learning model development, and fine-tuned large language models (LLMs) for intelligent downstream processing. I actively contributed to the creation of agent-to-agent workflows that enabled collaborative decision-making and modular orchestration between autonomous components. Leveraging tools like n8n, I explored and integrated low-code workflow automation to streamline inter-agent communication, background tasks, and API triggers. I also developed automated web scraping pipelines to collect and structure real-world data efficiently and optimized multiple API integrations to enhance data flow and system responsiveness. Throughout the internship, I gained deep hands-on experience with AI/ML tooling, workflow orchestration, and scalable deployment strategies, while consistently adhering to clean architecture and maintainable code practices.<br/>
+    <a href="https://docs.google.com/document/d/1Hh-HKe_siQGA7x8BkTzSn7kaeq9qNjpXR4vn3fqw4Ew/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+       View Certificate and offer letter
+    </a>
+  </li><br/>
+</ul>
+
+  </section><ul>
+  
+</ul>
+
+  <div class="divider"></div>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>
+     Email: <a href="mailto:praditag01@gmail.com">praditag01@gmail.com</a><br/>
+
+      LinkedIn: <a href="https://www.linkedin.com/in/pradita-g-5118012a0/" target="_blank">linkedin.com/in/praditag</a><br/>
+      GitHub: <a href="https://github.com/Pradita-01" target="_blank">github.com/praditag01</a><br/>
+      Location: Chennai, India
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Projects -->
+  <div class="section" id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+  <h3><a href="https://github.com/Pradita-01/Aadhar_card_detection" target="_blank">Aadhaar Fake Detection using CLIP & PyTorch</a></h3>
+  <p>
+    <strong>Situation:</strong> With increasing incidents of forged Aadhaar cards being used for fraudulent activities in India, there was a need for an automated system to validate Aadhaar authenticity.<br/>
+    <strong>Task:</strong> Design and implement a robust machine learning system capable of detecting fake Aadhaar cards using multimodal inputs (text + image).<br/>
+    <strong>Action:</strong> Utilized OpenAI’s CLIP model to extract joint text-image embeddings, trained a classifier on synthetically generated real and fake Aadhaar card samples using PyTorch, and fine-tuned the model using pretrained weights for better convergence.<br/>
+    <strong>Result:</strong> Achieved 80% validation accuracy on the test set, showcasing the system's potential for real-world deployment in digital KYC pipelines.
+  </p>
+</div>
+
+<div class="project">
+  <h3><a href="https://github.com/Pradita-01/crypto-tracker" target="_blank">Real-Time Cryptocurrency Tracker</a></h3>
+  <p>
+    <strong>Situation:</strong> Cryptocurrency markets are highly volatile, and users need real-time tools to track live prices, trends, and volumes across exchanges.<br/>
+    <strong>Task:</strong> Develop an interactive and responsive dashboard that streams live crypto price updates with visual insights.<br/>
+    <strong>Action:</strong> Built a full-stack web application using React for the frontend, Redux Toolkit for state management, and integrated real-time WebSocket APIs to fetch and update cryptocurrency data dynamically.<br/>
+    <strong>Result:</strong> Delivered a seamless dashboard with auto-refreshing price charts, high responsiveness, and accurate real-time data — improving user experience for crypto traders.
+  </p>
+</div>
+
+<div class="project">
+  <h3><a href="https://github.com/Joshika28/SIH-Glacier-outburst-" target="_blank">GLOF Prediction & Early Warning System</a></h3>
+  <p>
+    <strong>Situation:</strong> Glacial Lake Outburst Floods (GLOFs) pose severe risks to Himalayan regions due to sudden lake breaches triggered by climate change and glacial melt.<br/>
+    <strong>Task:</strong> Build a scalable early warning system that predicts potential GLOFs and provides timely alerts to local authorities.<br/>
+    <strong>Action:</strong> Developed a hybrid solution integrating real-time IoT sensor data (temperature, water level), LSTM-based time-series prediction models, and a Django-based web dashboard to issue warnings and visualize risk levels.<br/>
+    <strong>Result:</strong> Successfully simulated early warning capabilities with predictive insights, contributing to disaster mitigation and preparedness strategies.
+  </p>
+</div>
+
+<div class="project">
+  <h3><a href="https://github.com/Pradita-01/Os_project" target="_blank">Secure File Encryption System</a></h3>
+  <p>
+    <strong>Situation:</strong> Handling large sensitive files securely is a critical requirement in operating systems, especially in file transfers and data storage.<br/>
+    <strong>Task:</strong> Create an efficient command-line tool that encrypts and decrypts files using strong encryption standards.<br/>
+    <strong>Action:</strong> Developed a C-based CLI tool using OpenSSL libraries that implemented AES-256-CBC encryption with secure initialization vector (IV) randomization and file chunking to handle large files without memory overflow.<br/>
+    <strong>Result:</strong> Delivered a secure, efficient, and lightweight file encryption system ensuring confidentiality, usability, and robust protection against brute-force attacks.
+  </p>
+</div>
+
+  <div class="divider"></div>
+
+  <!-- Achievements -->
+  <section class="section" id="achievements">
+    <h2 class="section-title">Achievements & Honors</h2>
+    <ul>
+      <li><strong>Smart India Hackathon – Qualified for Round 2</strong><br/>
+        Built a real-time GLOF detection system using satellite data and sensor fusion; improved alert speed by 75%.
+      </li><br/>
+      <li><strong>Hackoverflow 8.0 Finalist – NIT Durgapur</strong><br/>
+        Finalist for an AI-IoT-based GLOF early warning solution using remote sensing and LSTM models.
+      </li>
+    </ul>
+  </section>
+
+  <!-- Top Button -->
+  <button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Pradita. All Rights Reserved.
+  </footer>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      topBtn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
+    };
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
